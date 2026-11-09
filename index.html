@@ -1,67 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweet Crumbs Bakery</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <script src="menu.js" defer></script>
-    <link rel="icon" href="images/logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Crumbs Bakery — Fresh Cakes, Cupcakes & Cookies</title>
+  <meta name="description" content="Sweet Crumbs Bakery — home-baked cakes, cupcakes, cookies, brownies and donuts delivered fresh. Order via WhatsApp." />
+  <link rel="icon" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="brand">
-        <img src="images/logo.png" alt="Sweet Crumbs Bakery Logo" class="logo">
-        <h1>Sweet Crumbs Bakery</h1>
-        </div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#menu">Menu</a>
-            <a href="#contact">Contact</a>
-            <a href="#cart">Cart</a>
-            <span id="cart-count">Cart: 0</span>
-            <button id="clear-btn">Clear</button>
-            <button id="order-btn">Send Order</button>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-    <div class="hero-text">
-        <h2>Fresh Cakes &amp; Cupcakes</h2>
-        <p>Freshly baked cakes, cupcakes and cookies, made at home with love.</p>
-        <a href="https://wa.me/923012345678" target="_blank" rel="noopener">Chat on WhatsApp</a>
+  <header>
+    <div class="brand">
+      <img src="images/logo.png" alt="Sweet Crumbs Bakery Logo" class="logo" />
+      <h1>Sweet Crumbs Bakery</h1>
     </div>
-    <img src="images/hero.jpg" alt="Cupcake with pink frosting" class="hero-img">
-</section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Sweet Crumbs is a home bakery run with love and quality ingredients. Every day we bake fresh cakes, cupcakes and cookies for birthdays, celebrations and everyday cravings. Each order is made to order, so it always arrives fresh.</p>
-        </section>
-        <section id="menu">
-    <h2>Our Menu</h2>
-    <div class="product-grid" id="menu-grid"></div>
-</section>
-        <section id="cart">
-            <h2>Your Cart</h2>
-            <div id="cart-items"></div>
-            <p id="cart-total"></p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Phone: <a href="tel:+923012345678">+92 301 2345678</a></p>
-            <p>WhatsApp: <a href="https://wa.me/923012345678" target="_blank" rel="noopener">Chat with us</a></p>
-            <p>Email: <a href="mailto:info@sweetcrumbsbakery.com">info@sweetcrumbsbakery.com</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Sweet Crumbs Bakery. All rights reserved.</p>
-        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
-    </footer>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="main-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+      <a href="#cart" class="cart-link">Cart <span id="cart-count">0</span></a>
+      <button id="clear-btn" type="button">Clear</button>
+      <button id="order-btn" type="button">Send Order</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h2>Fresh Cakes &amp; Cupcakes</h2>
+        <p>Freshly baked cakes, cupcakes and cookies — made at home with love.</p>
+        <a href="https://wa.me/923012345678" target="_blank" rel="noopener" class="btn-primary">Chat on WhatsApp</a>
+      </div>
+      <img src="images/hero.jpg" alt="Freshly baked cake with frosting" class="hero-img" />
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Sweet Crumbs is a home bakery run with love and quality ingredients. Every day we bake fresh cakes, cupcakes and cookies for birthdays, celebrations and everyday cravings. Each order is made to order, so it always arrives fresh.</p>
+    </section>
+
+    <section id="menu">
+      <h2>Our Menu</h2>
+      <div class="product-grid" id="menu-grid">
+        <p class="loading">Loading menu...</p>
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <p id="cart-total" class="cart-total"></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Phone: <a href="tel:+923012345678">+92 301 2345678</a></p>
+      <p>WhatsApp: <a href="https://wa.me/923447550794" target="_blank" rel="noopener">Chat with us</a></p>
+      <p>Email: <a href="mailto:info@sweetcrumbsbakery.com">info@sweetcrumbsbakery.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sweet Crumbs Bakery. All rights reserved.</p>
+    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+  </footer>
+
+  <!-- Body tag ke bilkul end mein (</body> se pehle) yeh lagayen -->
+<div id="toast" class="toast"></div>
+
+<script src="config.js" defer></script>
+<script src="script.js" defer></script>
+<script src="menu.js" defer></script>
 </body>
 </html>
